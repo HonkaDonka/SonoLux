@@ -1,9 +1,15 @@
 # Launchpad
 A reactive 8x8 capacitive Launchpad
-> I can't think of a better name so this will be it for now
 
 ## May 24: Research
-I'm planning on using an ESP32 I have lying around for the MCU. Although it has 10 capacitive touch GPIOs, an 8x8 grid warrants 64 of them. Originally I was planning on using the MPR121 capacitve touch IC, but it only has 4 I2C addresses and each chip supports 12 channels, making it able to support a maximum of 48 touch pads (less than 64). For now, I'm planning on bypassing this by adding another I2C bus. 
+I'm planning on using an extra ESP32 I have lying around for the MCU on this project. Since I want to use capacitive touch buttons instead of mechanical switches, I did a bit of digging and found that the ESP32 does have 10 capacitive touch GPIOs. However, an 8x8 grid warrants 64 of them. 
+
+I looked up some capacitive touch ICs and settled on the MPR121 becuase of the documentation and its availability. Each chip supports up to 12 channels and it can be configured into four different I2C addresses. This only makes 48 channels for capacitive touch, but I'm planning to work around this by adding another I2C bus.
+
+MPR121
+
+![image](https://github.com/user-attachments/assets/f93f7ddc-ef85-4ea9-bc36-2e3f7855d3a4)
+<img width="205" alt="image" src="https://github.com/user-attachments/assets/170340f2-59e6-4521-b342-04d74b509a96" />
 
 Regarding lighting, I'm planning on using WS2812B LEDs because they are addressable and I have experience programming them already (Check out my HonkaCube project!)
 For WAV/MP3 playback, I have an SD card module (no SD card though😔).
