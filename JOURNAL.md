@@ -79,3 +79,16 @@ I'm trying to keep the PCB at two layers, but its a little difficult routing the
 
 **Time spent this session: 4 hours**
 
+## May 29: Too much KiCad
+
+I did some journal updates and added some details + fixed some errors. 
+
+For portability, I want to add a LiPo battery into the Launchpad and that means I need to have a charging and battery protection circuit. Luckily I found [this guide](https://www.instructables.com/DIY-LiPo-ChargeProtect5V-Boost-Circuit/) on how I can do just that!
+
+However, that's an addition I'm going to work on later. For now I need to continue routing connections on my PCB and soon get started on the modeling of the enclosure. 
+
+This is what the board looks like currently. I haven't added the SDA/SCL lines just yet. 
+
+![image](https://github.com/user-attachments/assets/d4dbbe7b-59c0-491b-8f84-14827f292c63)
+
+**Time spent this session: 2 hours**
