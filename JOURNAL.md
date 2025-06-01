@@ -87,6 +87,8 @@ For portability, I want to add a LiPo battery into the Launchpad and that means 
 
 However, that's an addition I'm going to work on later. For now I need to continue routing connections on my PCB and soon get started on the modeling of the enclosure. 
 
+I tried to use an autorouter(freerouting) for all the IC connections because they were going to be really time consuming, but it turns out autorouters aren't the smartest (it tried to delete my entire PCB).
+
 This is what the board looks like currently. I haven't added the SDA/SCL lines just yet. 
 
 ![image](https://github.com/user-attachments/assets/d4dbbe7b-59c0-491b-8f84-14827f292c63)
