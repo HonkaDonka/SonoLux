@@ -1,5 +1,9 @@
-# Launchpad
-A reactive 8x8 capacitive Launchpad
+---
+title: "SonoLux"
+author: "@High_Kid"
+description: "Reactive 8x8 LED grid"
+created_at: "2025-05-24"
+---
 
 ## May 24: Research
 I'm planning on using an extra ESP32 I have lying around for the MCU on this project. Since I want to use capacitive touch buttons instead of mechanical switches, I did a bit of digging and found that the ESP32 does have 10 capacitive touch GPIOs. However, an 8x8 grid warrants 64 of them. 
