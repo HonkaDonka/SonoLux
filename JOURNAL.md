@@ -98,3 +98,9 @@ This is what the board looks like currently. I haven't added the SDA/SCL lines j
 ![image](https://github.com/user-attachments/assets/d4dbbe7b-59c0-491b-8f84-14827f292c63)
 
 **Time spent this session: 2 hours**
+
+## June 1: I messed up
+
+Switched to 4 layer PCB. I have a ground plane and a 5V plane
+
+![image](https://github.com/user-attachments/assets/1c62bfbe-a15c-4735-9cfa-ea204f0e0fc6)
