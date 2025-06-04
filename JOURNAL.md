@@ -101,6 +101,10 @@ This is what the board looks like currently. I haven't added the SDA/SCL lines j
 
 ## June 1: I messed up
 
-Switched to 4 layer PCB. I have a ground plane and a 5V plane
+Switched to 4 layer PCB. I added a ground plane and a 5V plane, making wiring so much simpler. 
+
+Also decided to make the LiPo battery circuit external to the board in favor of space and fear of frying things if I made a mistake.
 
 ![image](https://github.com/user-attachments/assets/1c62bfbe-a15c-4735-9cfa-ea204f0e0fc6)
+
+**Time spent this session: 2 hours**
