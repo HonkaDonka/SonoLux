@@ -114,3 +114,10 @@ Also decided to make the LiPo battery circuit external to the board in favor of 
 ![image](https://github.com/user-attachments/assets/f38b5492-6fae-4289-817a-0917d05e5260)
 
 **Time spent this session: 0 hours 😁**
+
+## June 14: Back
+
+Finalized a couple things. Time to CAD!!!
+
+<img width="617" alt="image" src="https://github.com/user-attachments/assets/64c495e1-ae72-4803-b608-d5613ac6757a" />
+
