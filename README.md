@@ -2,7 +2,7 @@
 
 Submission for Hack Club Highway
 
-## Bill of Materials (BOM)
+## Bill of Materials (BOM) (very rough and has placeholder values)
 
 | ITEM | DESCRIPTION | UNIT COST (USD) | QTY | TOTAL COST | SOURCE / LINK |
 |------|-------------|:---------------:|:---:|:----------:|---------------|
