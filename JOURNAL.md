@@ -50,9 +50,9 @@ I also created a footprint and a symbol for each "tile" (copper pad + SK6812). T
 
 | Image | Description |
 |------|-------------|
-| <img width="200" alt="image" src="https://github.com/user-attachments/assets/41a373a7-c310-4ca6-9859-004146c7a1ed" /> | Footprint Front |
-| <img width="200" alt="image" src="https://github.com/user-attachments/assets/153b0687-0c3a-47e9-89bd-2ec9e3264a6f" /> | Footprint Back |
-| <img width="485" alt="image" src="https://github.com/user-attachments/assets/f9428d6a-0485-4c81-bff1-7d897099abb0" /> | Symbol |
+| <img width="100" alt="image" src="https://github.com/user-attachments/assets/41a373a7-c310-4ca6-9859-004146c7a1ed" /> | Footprint Front |
+| <img width="100" alt="image" src="https://github.com/user-attachments/assets/153b0687-0c3a-47e9-89bd-2ec9e3264a6f" /> | Footprint Back |
+| <img width="100" alt="image" src="https://github.com/user-attachments/assets/f9428d6a-0485-4c81-bff1-7d897099abb0" /> | Symbol |
 
 Additionally, I started creating the actual schematic for the project.
 
