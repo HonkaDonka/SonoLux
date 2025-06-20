@@ -1,23 +1,25 @@
 ---
 title: "SonoLux"
 author: "@High_Kid"
-description: "Reactive 8x8 LED grid"
+description: "Reactive LED matrix"
 created_at: "2025-05-24"
 ---
 
 ## May 24: Research
-I'm planning on using an extra ESP32 I have lying around for the MCU on this project. Since I want to use capacitive touch buttons instead of mechanical switches, I did a bit of digging and found that the ESP32 does have 10 capacitive touch GPIOs. However, an 8x8 grid warrants 64 of them. 
+Here's a mini list of what I want to include in this project:
+- Some sort of capacitive touch
+- LEDs (preferably addressable ones)
+- Sound
+- Audio input
+- Built-in audio playback
 
-I looked up some capacitive touch ICs and settled on the MPR121 becuase of the documentation and its availability. Each chip supports up to 12 channels and it can be configured into four different I2C addresses. This only makes 48 channels for capacitive touch, but I'm planning to work around this by adding another I2C bus for an additional two units of the IC.
+I based this project off of a launchpad, which is a grid of buttons each assigned to a sound. However, I also wanted to add my own spin on it (hence the capacitive touch + audio input). 
 
-MPR121
+I looked up some capacitive touch ICs and settled on the MPR121 becuase of the available documentation and its price. According to [its datasheet](https://lcsc.com/datasheet/lcsc_datasheet_2410010232_NXP-Semicon-MPR121QR2_C91322.pdf), each chip supports up to 12 channels and it can be configured into four different I2C addresses. This only makes 48 channels for capacitive touch, but I'm planning to work around this by adding another I2C bus for an additional two units of the IC.
 
-![image](https://github.com/user-attachments/assets/f93f7ddc-ef85-4ea9-bc36-2e3f7855d3a4)
-<img width="250" alt="image" src="https://github.com/user-attachments/assets/170340f2-59e6-4521-b342-04d74b509a96" />
+For the LED lighting in the project, I'm planning on using WS2812B LEDs because they are addressable. Yes, they are more expensive than regular LEDs, but they eliminate the need for shift registers and only require one data line. Plus, I already have experience programming them (Check out my [HonkaCube](https://github.com/HonkaDonka/LEDCube) project!)
 
-For the lighting in the project, I'm planning on using WS2812B LEDs because they are addressable so wiring doesn't have to be a mess (just one data line) and I already have experience programming them (Check out my HonkaCube project!)
-
-For WAV/MP3 playback, I have an SD card module (no SD card though 😔) and a MAX98357 amp already.
+For audio playback, I have an SD card module (no SD card though 😔) and a MAX98357 amp already. The only thing I'm missing regarding this is a speaker. 
 
 Next up:
 Perhaps prototype a 1x1 LED + capacitive sensing (using ESP32's built-in pins)
@@ -111,7 +113,7 @@ Also decided to make the LiPo battery circuit external to the board in favor of 
 
 ## June 7: Graduation 
 
-![image](https://github.com/user-attachments/assets/f38b5492-6fae-4289-817a-0917d05e5260)
+![461D8574-CD1D-4C72-B525-663D7E9CECA2_1_201_a](https://github.com/user-attachments/assets/b1d23793-9ac9-40cd-b8d8-1262132799b0)
 
 **Time spent this session: 0 hours 😁**
 
@@ -121,3 +123,8 @@ Finalized a couple things. Time to CAD!!!
 
 <img width="617" alt="image" src="https://github.com/user-attachments/assets/64c495e1-ae72-4803-b608-d5613ac6757a" />
 
+## June 18-20: CAD
+
+WIP
+
+**Time spent this session: 5 hours**
