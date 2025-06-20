@@ -24,8 +24,8 @@ For the LED lighting in the project, I'm planning on using WS2812B LEDs because 
 For audio playback, I have an SD card module (no SD card though 😔) and a MAX98357 amp already. The only thing I'm missing regarding this is a speaker. 
 
 Next up:
-Perhaps prototype a 1x1 LED + capacitive sensing (using ESP32's built-in pins)
-Figure out all the electronics needed + PCB design
+- Perhaps prototype a 1x1 LED + capacitive sensing (using ESP32's built-in pins)
+- Figure out all the electronics needed + PCB design
 
 **Time spent this session: 2 hours**
 
@@ -60,11 +60,9 @@ Additionally, I started creating the actual schematic for the project.
 
 ## May 26: A LOT of KiCad
 
-I searched far and wide to find footprints for specific breakout boards I was using. Additionally I had to made sure I had mapped out the pins correctly on the ESP32, as this is easily one of the most ambitious projects I'm making. 
+One thing I was thinking of was leaving extra pin headers in case I want to add extra peripherals after the PCB is made. 
 
-Idea: One thing I was thinking of was leaving extra pin headers in case I want to add a rotary encoder or something after the PCB is made. 
-
-In KiCad, I spent a lot of time creating the schematic and laying out the PCB.
+In KiCad, I spent a lot of time creating the schematic and laying out the PCB. I recently found out about heirarchical sheets and they are SUCH a livesaver. 
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/1a2dd47a-1c1b-45ae-bcb6-4d78cb08acfd" />
 
@@ -72,11 +70,11 @@ Inside the heirarchical sheets:
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/bdc7f562-1df6-461e-9acb-d270c1b5b686" />
 
-What the current PCB looks like:
+What the current PCB looks like (I know it looks like a nightmare):
 
 <img width="1000" alt="image" src="https://github.com/user-attachments/assets/51f7e6a9-9714-4082-9efa-723405ba0f8d" />
 
-I'm trying to keep the PCB at two layers, but its a little difficult routing the connections becase of the big capacitive touch pads I made on the front layer. 
+I'm trying to keep the PCB at two layers, but its a little difficult routing the connections becase of the big capacitive touch pads I made on the front layer. I'm going to look into using an autorouter to get this done. 
 
 **Time spent this session: 4 hours**
 
@@ -84,11 +82,11 @@ I'm trying to keep the PCB at two layers, but its a little difficult routing the
 
 I did some journal updates and added some details + fixed some errors. 
 
-For portability, I want to add a LiPo battery into the Launchpad and that means I need to have a charging and battery protection circuit. Luckily I found [this guide](https://www.instructables.com/DIY-LiPo-ChargeProtect5V-Boost-Circuit/) on how I can do just that!
+For portability, I want to add a LiPo battery into the Launchpad and that means I need to have a charging and battery protection circuit. Luckily, I found [this guide](https://www.instructables.com/DIY-LiPo-ChargeProtect5V-Boost-Circuit/) on how I can do just that!
 
 However, that's an addition I'm going to work on later. For now I need to continue routing connections on my PCB and soon get started on the modeling of the enclosure. 
 
-I tried to use an autorouter(freerouting) for all the IC connections because they were going to be really time consuming, but it turns out autorouters aren't the smartest (it tried to delete my entire PCB).
+I tried to use an autorouter(freerouting) plugin for all the IC connections because they were going to be really time consuming, but it turns out autorouters aren't the smartest (it tried to delete my entire PCB).
 
 This is what the board looks like currently. I haven't added the SDA/SCL lines just yet. 
 
@@ -98,15 +96,18 @@ This is what the board looks like currently. I haven't added the SDA/SCL lines j
 
 ## June 1: I messed up
 
-Switched to 4 layer PCB. I added a ground plane and a 5V plane, making wiring so much simpler. 
+Change of plans, I'm switching to a 4 layer PCB. After rewiring everything (and modifying some existing connections), I added a ground plane and a 5V power plane on the inner two layers, making wiring so much simpler. This also has the advantage of separating the MPR121 and LED data lines further, increasing signal integrity (I think?) 
 
-Also decided to make the LiPo battery circuit external to the board in favor of space and fear of frying things if I made a mistake.
+In favor of space, I decided to make the LiPo battery circuit external, so I won't be putting it on the PCB. 
+
+Today I exported the design in JLCPCB to check for any pick and place errors. For some reason, it's showing the SK6812s as front-side components, even though they are reverse mounted. I think this is because the footprint I made for the copper ring and LED is assigned to F.Cu. I fixed this by going to KiCad's footprint editor and flipping the LED Tile footprint (and swapping the pads around). After updating all the existing footprints, it all seemed good to go! 
 
 ![image](https://github.com/user-attachments/assets/1c62bfbe-a15c-4735-9cfa-ea204f0e0fc6)
 
-**Time spent this session: 2 hours**
+**Time spent this session: 5 hours**
 
 ## June 7: Graduation 
+Yay.
 
 ![461D8574-CD1D-4C72-B525-663D7E9CECA2_1_201_a](https://github.com/user-attachments/assets/b1d23793-9ac9-40cd-b8d8-1262132799b0)
 
@@ -114,7 +115,12 @@ Also decided to make the LiPo battery circuit external to the board in favor of 
 
 ## June 14: Back
 
-Finalized a couple things. Time to CAD!!!
+Finalized a couple things. Changes include:
+- Adding M3 mounting holes
+- Adding capacitors at power entry points
+- Flipping some components
+
+Time to CAD!!!
 
 <img width="617" alt="image" src="https://github.com/user-attachments/assets/64c495e1-ae72-4803-b608-d5613ac6757a" />
 
