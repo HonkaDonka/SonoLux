@@ -113,19 +113,31 @@ Yay.
 
 **Time spent this session: 0 hours 😁**
 
-## June 14: Back
+## June 14: I'm Back
 
 Finalized a couple things. Changes include:
 - Adding M3 mounting holes
 - Adding capacitors at power entry points
 - Flipping some components
 
-Time to CAD!!!
-
 <img width="617" alt="image" src="https://github.com/user-attachments/assets/64c495e1-ae72-4803-b608-d5613ac6757a" />
 
-## June 18-20: CAD
+I chose my speaker and battery circuit: 
 
-WIP
+<img width="574" alt="image" src="https://github.com/user-attachments/assets/8c95f5fc-c3cf-4a60-b663-35a94d057efc" />
+
+![image](https://github.com/user-attachments/assets/d0f60481-56ab-4e66-8598-5c6d6c8d824a)
+
+Time to CAD!!!
+
+**Time spent this session: 1 hour**
+
+## June 18-20: CAD Madhouse
+
+For the enclosure, I'm thinking of having a box with the acrylic making up the top surface. Sitting right below the acrylic would be the PCB. 
+
+Regarding speaker mounting, I created a cutout on the PCB so that the speaker would fit without hitting the PCB. 
+
+<img width="652" alt="image" src="https://github.com/user-attachments/assets/a1b969d1-e8d4-4fac-96ee-7f316689c51e" />
 
 **Time spent this session: 5 hours**
