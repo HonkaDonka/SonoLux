@@ -13,7 +13,9 @@ Here's a mini list of what I want to include in this project:
 - Audio input
 - Built-in audio playback
 
-I based this project off of a launchpad, which is a grid of buttons each assigned to a sound. However, I also wanted to add my own spin on it (hence the capacitive touch + audio input). 
+I based this project off of a launchpad (image below), which is a grid of buttons each assigned to a sound. However, I also wanted to add my own spin on it (hence the capacitive touch + audio input). 
+
+![image](https://github.com/user-attachments/assets/f8401ea9-f9ae-401e-9063-c157b9924886)
 
 I looked up some capacitive touch ICs and settled on the MPR121 becuase of the available documentation and its price. According to [its datasheet](https://lcsc.com/datasheet/lcsc_datasheet_2410010232_NXP-Semicon-MPR121QR2_C91322.pdf), each chip supports up to 12 channels and it can be configured into four different I2C addresses. This only makes 48 channels for capacitive touch, but I'm planning to work around this by adding another I2C bus for an additional two units of the IC.
 
@@ -28,9 +30,11 @@ Figure out all the electronics needed + PCB design
 **Time spent this session: 2 hours**
 
 ## May 25: More Research + KiCad
-I'm thinking of using a PCB with copper rings connected to the MPR121s. The copper rings would be for capacitive touch and would sit directly under diffused acrylic. I want to minimize the distance between the finger and the copper rings so I think all the ICs on the board would have to be mounted underneath. 
+I'm thinking of using a PCB with copper pads connected to the MPR121s. The copper pads would be for capacitive touch sensing and would connect directly to the MPR121 channels. To protect the copper rings, I'm planning on having a thing sheet of acrylic above the PCB. However, this means the top layer would have to be completely flat, so all electronics that stick out would have to be mounted on the bottom (including the MPR121s)
 
-This is where I ran into a major roadblock: since I'm planning on using WS2812B LEDs, I'd have to somehow mount them in such a way that sits flush with the copper rings. I want to keep everything on a single PCB, so I decided to use reverse-mount LEDs (SK6812-Mini-E). These are also addressable, so I can use the same libraries I've been using/
+This is where I ran into a major roadblock: since I'm planning on using WS2812B LEDs, I'd have to somehow mount them in such a way that sits flush with or below the copper rings. At first, I was thinking of having two PCBs: one would be the 8x8 matrix of LEDs, and the copper rings would sit right on top, with cutouts so the light can shine through. There are plenty of 8x8 matrices available on Aliexpress as well. However, I'd have to design "around" those LED matrices, and many of them aren't as big as I want anyways. 
+
+After doing a bit of research, I decided to use reverse-mount LEDs (SK6812-Mini-E). These are also addressable, so I can use the same [libraries](https://github.com/adafruit/Adafruit_NeoMatrix) I've been using for my previous projects.
 
 To begin creating the PCB, I did a bunch of digging for KiCad footprints and other components. 
 
@@ -40,26 +44,17 @@ I took a look at the MPR121 datasheet and found a good reference on how to hook 
 
 ![image](https://github.com/user-attachments/assets/a212b5b4-bc4f-4c60-9bec-c13e326b2a37)
 
-According to the datasheet, attaching ADDR to other pins changes the I2C address. Apparently it can also control LEDs 😮
+According to the datasheet, attaching ADDR to other pins changes the I2C address. Apparently it can also control LEDs 😮, but that's not what I'm using them for.
 
-I also created a footprint and a symbol for each "tile" (copper ring + SK6812s). 
+I also created a footprint and a symbol for each "tile" (copper pad + SK6812). The symbol was simply an addressable LED symbol with an extra pin. 
 
-Front: 
+| Image | Description |
+|------|-------------|
+| <img width="200" alt="image" src="https://github.com/user-attachments/assets/41a373a7-c310-4ca6-9859-004146c7a1ed" /> | Footprint Front |
+| <img width="200" alt="image" src="https://github.com/user-attachments/assets/153b0687-0c3a-47e9-89bd-2ec9e3264a6f" /> | Footprint Back |
+| <img width="485" alt="image" src="https://github.com/user-attachments/assets/f9428d6a-0485-4c81-bff1-7d897099abb0" /> | Symbol |
 
-<img width="200" alt="image" src="https://github.com/user-attachments/assets/41a373a7-c310-4ca6-9859-004146c7a1ed" />
-
-Back: 
-
-<img width="200" alt="image" src="https://github.com/user-attachments/assets/153b0687-0c3a-47e9-89bd-2ec9e3264a6f" />
-
-
-3D Render: 
-
-<img width="200" alt="image" src="https://github.com/user-attachments/assets/21b6fbce-a14d-4a19-9832-60517273aa58" />
-
-<img width="200" alt="image" src="https://github.com/user-attachments/assets/a461d756-0739-40af-807a-faa1b8e5e567" />
-
-I'm also in the process of learning KiCad (I've only used EasyEDA) and creating the actual schematic for the single PCB. 
+Additionally, I started creating the actual schematic for the project.
 
 **Time spent this session: 3 hours**
 
