@@ -136,8 +136,22 @@ Time to CAD!!!
 
 For the enclosure, I'm thinking of having a box with the acrylic making up the top surface. Sitting right below the acrylic would be the PCB. 
 
-Regarding speaker mounting, I created a cutout on the PCB so that the speaker would fit without hitting the PCB. 
+![image](https://github.com/user-attachments/assets/bf68d724-221b-4756-8b8a-eee298a59377)
+
+I'm trying to figure out how to mount the top components, as the speaker I chose is quite big. I chose to make a cutout on the PCB so that the speaker would fit without hitting the PCB. 
 
 <img width="652" alt="image" src="https://github.com/user-attachments/assets/a1b969d1-e8d4-4fac-96ee-7f316689c51e" />
+
+I'm left with something like this. The red outline would be the acrylic and the blue outline would be the top of the enclosure, printed as a separate piece. 
+
+![image](https://github.com/user-attachments/assets/9531d11c-2092-4983-9187-7c12f2dc1e84)
+
+Created the final cover, spent a lot of time adjusting the length of the extrudes to match the dimensions of the PCB, acrylic, speaker, etc. 
+
+![image](https://github.com/user-attachments/assets/9db51201-67e1-4c9d-96b5-b883a2374be1)
+
+Final exploded view:
+
+![image](https://github.com/user-attachments/assets/cd5284ed-cd02-4044-a1ad-f129fc292bc7)
 
 **Time spent this session: 5 hours**
