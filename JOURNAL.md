@@ -146,7 +146,7 @@ I'm left with something like this. The red outline would be the acrylic and the 
 
 ![image](https://github.com/user-attachments/assets/9531d11c-2092-4983-9187-7c12f2dc1e84)
 
-Created the final cover, spent a lot of time adjusting the length of the extrudes to match the dimensions of the PCB, acrylic, speaker, etc. 
+Created the final cover, spent a lot of time adjusting the length of the extrudes to match the dimensions of the PCB, acrylic, speaker, etc. The top right of the case is a bit empty right now, but I can add my own additions later.
 
 ![image](https://github.com/user-attachments/assets/9db51201-67e1-4c9d-96b5-b883a2374be1)
 
