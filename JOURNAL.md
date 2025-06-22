@@ -110,7 +110,7 @@ Today I exported the design in JLCPCB to check for any pick and place errors. Fo
 ## June 7: Graduation 
 Yay.
 
-![461D8574-CD1D-4C72-B525-663D7E9CECA2_1_201_a](https://github.com/user-attachments/assets/b1d23793-9ac9-40cd-b8d8-1262132799b0)
+<img width="314" alt="image" src="https://github.com/user-attachments/assets/b1d23793-9ac9-40cd-b8d8-1262132799b0" />
 
 **Time spent this session: 0 hours 😁**
 
