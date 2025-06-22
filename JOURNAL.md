@@ -4,6 +4,7 @@ author: "@High_Kid"
 description: "Reactive LED matrix"
 created_at: "2025-05-24"
 ---
+## Total Time Logged: 23 hours
 
 ## May 24: Research
 Here's a mini list of what I want to include in this project:
