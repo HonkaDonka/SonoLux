@@ -155,3 +155,9 @@ Final exploded view:
 ![image](https://github.com/user-attachments/assets/cd5284ed-cd02-4044-a1ad-f129fc292bc7)
 
 **Time spent this session: 5 hours**
+
+## June 21: Finalizing (hopefully)
+
+Uploaded relevant files and wrote out the README.
+
+**Time spent this session: 1 hour**
